@@ -232,7 +232,7 @@ if __name__ == '__main__':
         #print(ipaddr,"\n")
         dt_now = datetime.datetime.now()
         name =  str(dt_now.year) + "_" + str(dt_now.month) + str(dt_now.day) + "_" + str(dt_now.hour) + str(dt_now.minute) + "_" + ipaddr[:-2] + ".csv"
-        path = "ScanData/" + name
+        path = "CsvData/" + name
         save_file(path, data_list)
 
         G_upload_scanData(path, "bluetooth_data", name) #scanしたデータをアップロード
@@ -272,7 +272,7 @@ if __name__ == '__main__':
             axs.set_ylabel("rssi [dBm]")
 
             scatter_name = scatter_title + "_" + ipaddr[:-2] + ".png"
-            scatter_path = "TestPngData/" + scatter_name
+            scatter_path = "PngData/" + scatter_name
             fig.savefig(scatter_path)
 
             G_upload_ScatterFig(scatter_path, "bluetooth_data", scatter_name)
