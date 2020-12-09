@@ -122,6 +122,7 @@ def timer_count(base_t):
 def IPget():    #IPアドレスの取得
     a = ipget.ipget()
     ipaddr = str(a.ipaddr("eth0"))
+    #ipaddr = str(a.ipaddr("wlan0"))
     return(ipaddr)
 #=====================================================================
 def save_file(name, data_list):
